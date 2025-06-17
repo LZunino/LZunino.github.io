@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Site avec onglets</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academic Profile</title>
   <style>
-    .tabs a {
-      padding: 10px;
-      margin-right: 5px;
-      background-color: #eee;
-      color: black;
-      text-decoration: none;
-      border-radius: 5px;
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
     }
-    .tabs a.active {
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .tab {
+      padding: 10px 15px;
+      background-color: #eee;
+      border-radius: 5px;
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .tab.active {
       background-color: #ccc;
+      font-weight: bold;
     }
     .content {
       display: none;
-      margin-top: 20px;
     }
     .content.active {
       display: block;
@@ -26,23 +38,42 @@
 </head>
 <body>
 
+  <h1>My Academic Profile</h1>
+
   <div class="tabs">
-    <a href="#" class="tab active" data-tab="accueil">Accueil</a>
-    <a href="#" class="tab" data-tab="projets">Projets</a>
+    <a href="#" class="tab active" data-tab="about">About</a>
+    <a href="#" class="tab" data-tab="research">Research Project</a>
+    <a href="#" class="tab" data-tab="papers">Papers</a>
+    <a href="#" class="tab" data-tab="cv">CV</a>
     <a href="#" class="tab" data-tab="contact">Contact</a>
   </div>
 
-  <div id="accueil" class="content active">
-    <h2>Bienvenue</h2>
-    <p>Contenu d'accueil.</p>
+  <div id="about" class="content active">
+    <h2>About Me</h2>
+    <p>I am a researcher in [your field]. My work focuses on [brief description].</p>
   </div>
-  <div id="projets" class="content">
-    <h2>Mes projets</h2>
-    <p>Liste des projets.</p>
+
+  <div id="research" class="content">
+    <h2>Research Project</h2>
+    <p>Current project: [Title of your project]. <br />Description: [Short summary].</p>
   </div>
+
+  <div id="papers" class="content">
+    <h2>Selected Papers</h2>
+    <ul>
+      <li><strong>Paper 1:</strong> Title, Journal, Year.</li>
+      <li><strong>Paper 2:</strong> Title, Conference, Year.</li>
+    </ul>
+  </div>
+
+  <div id="cv" class="content">
+    <h2>CV</h2>
+    <p><a href="cv.pdf" target="_blank">Download my CV (PDF)</a></p>
+  </div>
+
   <div id="contact" class="content">
     <h2>Contact</h2>
-    <p>Email : moi@exemple.com</p>
+    <p>Email: you@example.com<br/>LinkedIn: <a href="https://linkedin.com/in/yourname" target="_blank">yourname</a></p>
   </div>
 
   <script>
