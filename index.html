@@ -42,6 +42,12 @@
     .content.active {
       display: block;
     }
+    /* Spécifique à About */
+    #about.content.active {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
   </style>
 </head>
 <body>
@@ -61,15 +67,15 @@
     <a href="#" class="tab" data-tab="contact">Contact</a>
   </div>
 
-  <div id="about" class="content active"style="display: flex; align-items: center; gap: 20px;">
-  <div style="flex: 1;">
-    <h2>About Me</h2>
-    <p>I am a researcher in [your field]. My work focuses on [brief description].</p>
+  <div id="about" class="content active">
+    <div style="flex: 1;">
+      <h2>About Me</h2>
+      <p>I am a researcher in [your field]. My work focuses on [brief description].</p>
+    </div>
+    <div style="flex: 1;">
+      <img src="pictures/pictureLZ.jpg" alt="Photo de profil" style="max-width: 50%; height: auto; border-radius: 8px;">
+    </div>
   </div>
-      <div style="flex: 1;">
-    <img src="pictures/pictureLZ.jpg" alt="Photo de profil" style="max-width: 50%; height: auto; border-radius: 8px;">
-  </div>
-</div>
 
   <div id="research" class="content">
     <h2>Research</h2>
