@@ -18,7 +18,7 @@
     }
     .tabs {
       display: flex;
-      justify-content: center; /* center the tabs */
+      justify-content: center;
       gap: 10px;
       margin-bottom: 20px;
       flex-wrap: wrap;
@@ -42,11 +42,24 @@
     .content.active {
       display: block;
     }
-    /* Spécifique à About */
     #about.content.active {
       display: flex;
       align-items: center;
       gap: 20px;
+    }
+    #contact.content.active {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    #contact .text {
+      flex: 1;
+    }
+    #contact img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -64,7 +77,7 @@
     <a href="#" class="tab" data-tab="research">Research Project</a>
     <a href="#" class="tab" data-tab="papers">Publications</a>
     <a href="#" class="tab" data-tab="cv">CV</a>
-    <a href="#" class="tab" data-tab="contact">About me & Contact</a>
+    <a href="#" class="tab" data-tab="contact">About & Contact</a>
   </div>
 
   <div id="about" class="content">
@@ -93,16 +106,16 @@
     <p><a href="cv.pdf" target="_blank">Download my CV (PDF)</a></p>
   </div>
   
-  <div id="contact" class="content active">
-        <div style="flex: 1;">
+  <div id="contact" class="content">
+    <div class="text">
       <h2>About Me</h2>
       <p>I am a researcher in [your field]. My work focuses on [brief description].</p>
+      <h2>Contact</h2>
+      <p>Email: you@example.com<br/>LinkedIn: <a href="https://linkedin.com/in/yourname" target="_blank">yourname</a></p>
     </div>
-    <div style="flex: 1;">
-      <img src="pictures/pictureLZ_V2.jpg" alt="Photo de profil" style="max-width: 50%; height: auto; border-radius: 8px;">
+    <div>
+      <img src="pictures/pictureLZ_V2.jpg" alt="Photo de profil">
     </div>
-    <h2>Contact</h2>
-    <p>Email: you@example.com<br/>LinkedIn: <a href="https://linkedin.com/in/yourname" target="_blank">yourname</a></p>
   </div>
 
   <script>
